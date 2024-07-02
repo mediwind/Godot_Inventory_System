@@ -1,0 +1,291 @@
+[gd_scene load_steps=33 format=3 uid="uid://diae2wvyaytvy"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_fgcvp"]
+[ext_resource type="Texture2D" uid="uid://0flrot5hrf4a" path="res://Assets/person.png" id="2_4raxm"]
+[ext_resource type="FontFile" uid="uid://bi04iecmbt37l" path="res://Assets/Fonts/ARCADECLASSIC.TTF" id="3_qt3l8"]
+[ext_resource type="PackedScene" uid="uid://bjilyuhiyw8ge" path="res://Scenes/inventory_ui.tscn" id="4_4ir6f"]
+[ext_resource type="PackedScene" uid="uid://fknt8ew5tsfy" path="res://Scenes/inventory_hotbar.tscn" id="5_56b45"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orstc"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg7l3"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(0, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c5sm"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(64, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doeex"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(128, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilpjl"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(192, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oisds"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(256, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4f50"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(320, 256, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikkj0"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(0, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ff5wh"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(64, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwjfh"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(128, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_250b3"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(192, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eidqf"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(256, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2js5q"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(320, 448, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hivd2"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(0, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c2w0"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(64, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksan2"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(128, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfg53"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(192, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10e6y"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(256, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b31xr"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(320, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypnub"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb5ww"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suhpo"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sakgt"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rc24"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fudt1"]
+atlas = ExtResource("2_4raxm")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2eaq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orstc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg7l3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c5sm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doeex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilpjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oisds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4f50")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikkj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ff5wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwjfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_250b3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eidqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2js5q")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hivd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c2w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksan2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfg53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10e6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b31xr")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypnub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb5ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suhpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sakgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rc24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fudt1")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qbr2e"]
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+process_mode = 3
+script = ExtResource("1_fgcvp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x2eaq")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qbr2e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="InteractUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="InteractUI"]
+custom_minimum_size = Vector2(300, 50)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.192157, 0.376471, 0.321569, 0.839216)
+
+[node name="Label" type="Label" parent="InteractUI/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.5
+offset_top = -13.0
+offset_right = 75.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qt3l8")
+theme_override_font_sizes/font_size = 30
+text = "Press \"E\" to Pick Up"
+
+[node name="InventoryUI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="InventoryUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.192157, 0.376471, 0.321569, 1)
+
+[node name="Label" type="Label" parent="InventoryUI/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.5
+offset_top = 50.0
+offset_right = 37.5
+offset_bottom = 76.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_qt3l8")
+theme_override_font_sizes/font_size = 60
+text = "Inventory"
+
+[node name="Inventory_UI" parent="InventoryUI/ColorRect" instance=ExtResource("4_4ir6f")]
+
+[node name="InventoryHotbar" type="CanvasLayer" parent="."]
+
+[node name="Inventory_Hotbar" parent="InventoryHotbar" instance=ExtResource("5_56b45")]
+metadata/_edit_use_anchors_ = true
